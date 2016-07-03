@@ -1,0 +1,48 @@
+<div>
+  <div class="panel panel-danger pull-right">
+    <div class="panel-heading"><a href="#/">Home</a>
+    </div>
+  </div>
+  <br>
+    <h2>My Shopping Bag<span class="pull-right">Order Total:  {{total | currency}}</span></h2>
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Quantity</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+    <tbody>
+      <tr ng-repeat="tea in cart.list">
+        <td>
+            <h3>{{tea.name}}</h3>
+            <img ng-src="{{tea.imageUrl}}">
+            <p><strong>Price:</strong> {{tea.price| currency}}</p>
+            <p><strong>Caffeine Scale:</strong> {{tea.caffeineScale}}</p>
+            <p><strong>Rating: </strong> {{tea.rating}}</p>
+            <p><strong>In stock:</strong> {{tea.inStock}}</p>
+            <p><strong>Categories:</strong></p>
+            <ul ng-repeat="category in tea.categories">
+              <li>{{category}}</li>
+            </ul>
+        </td>
+        <td>    
+          <div>
+            <div ng-hide="tea.edit">{{tea.quantity}}</div>
+            <div ng-show="tea.edit">
+              <input ng-model="tea.quantity" type="number" class="form-control" title="quantity">
+              <button ng-click="editTea(tea._id, tea.quantity); tea.edit=false" type="button" class="btn btn-warning">Update</button>
+            </div>
+          </div>
+        </td>
+        <td>
+          <button ng-click="deleteTea(tea._id)" type="button" class="btn btn-warning">Delete</button>
+          <button ng-click="tea.edit=true" type="button" class="btn btn-warning">Edit</button>
+<!--           <button ng-click="edit=false" type="button" class="btn btn-warning">Done Editing</button>
+ -->        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

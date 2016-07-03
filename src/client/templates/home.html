@@ -1,0 +1,62 @@
+<div>
+
+  <div class="panel panel-danger pull-right">
+    <div class="panel-heading"><a href="#/checkout">Checkout</a> | Bag: {{cartNotification}}</div>
+  </div>
+
+  <div class="row">
+      <div class="col-md-2 panel-body">
+        Category: <select ng-model="teaCategory"
+                          ng-options="category for category in teaList.categories"></select>
+      </div>
+      <div class="col-md-3 panel-body">
+        <form>
+          Search  <input type="text" ng-model="search"><br>
+        </form>
+    </div>
+  </div>
+  
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Tea</th>
+        <th>Information</th>
+        <th>Sort by Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="tea in teaList | filter: search | filter:{categories: teaCategory} ">
+        <td>
+            <img ng-src="{{tea.imageUrl}}">
+        </td>
+        <td>
+            <h5>{{tea.name}}</h5>
+            <p><strong>Price:</strong> {{tea.price| currency}}</p>
+            <p><strong>Caffeine Scale:</strong> {{tea.caffeineScale}}</p>
+            <p><strong>Rating: </strong> {{tea.rating}}</p>
+            <p><strong>In stock:</strong> {{tea.inStock}}</p>
+            <p><strong>Categories:</strong></p>
+            <ul ng-repeat="category in tea.categories">
+              <li>{{category}}</li>
+            </ul>
+        </td>
+        <td>
+           <h5>Quantity</h5>
+           <select ng-model="quantity">
+             <option value="1">1</option>
+             <option value="2">2</option>
+             <option value="3">3</option>
+             <option value="4">4</option>
+             <option value="5">5</option>
+             <option value="6">6</option>
+             <option value="7">7</option>
+           </select>
+           <button ng-click="addTea(tea._id, quantity)" type="button" class="btn btn-warning">Add To Cart</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+</div>
