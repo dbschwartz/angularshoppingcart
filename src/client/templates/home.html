@@ -6,8 +6,10 @@
 
   <div class="row">
       <div class="col-md-2 panel-body">
-        Category: <select ng-model="teaCategory"
-                          ng-options="category for category in teaList.categories"></select>
+        Category: <select ng-init="teaCategory=teaList.categories[0]" 
+                          ng-options="category for category in teaList.categories" 
+                          ng-model="teaCategory">
+                  </select>
       </div>
       <div class="col-md-3 panel-body">
         <form>

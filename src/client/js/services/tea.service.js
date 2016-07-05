@@ -186,6 +186,7 @@ angular
   return {
     getTeaList: function() {
       formattedTeaList.categories = categoryCreator(formattedTeaList);
+      formattedTeaList.categories.unshift('');
       return formattedTeaList;
     },
     getTea: function(id) {
