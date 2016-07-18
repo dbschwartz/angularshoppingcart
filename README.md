@@ -1,7 +1,7 @@
 # Angular Shopping Cart
 
 ## Live Version of Application
-[Deployed Link](http://angularshoppingcart.herokuapp.com target="_blank")
+[Deployed Link](http://angularshoppingcart.herokuapp.com)
 
 ## Description
 A site that allows users to dynamically add tea selections to a shopping cart with AngularJS filtering and search functionality. Add teas by clicking add to cart next to each cart and view the shopping cart by clicking checkout at the top.  
