@@ -11,10 +11,10 @@ A site that allows users to dynamically add tea selections to a shopping cart wi
 
 ### Screenshots
 
-![Screenshot 1](/screenshot1.png "Screenshot 1")
-![Screenshot 2](/screenshot2.png "Screenshot 2")
-![Screenshot 3](/screenshot3.png "Screenshot 3")
-![Screenshot 4](/screenshot4.png "Screenshot 4")
+![Gif 1](/gif1.gif "Gif 1")
+![Gif 2](/gif2.gif "Gif 2")
+![Gif 3](/gif3.gif "Gif 3")
+
 
 
 ## Installation
