@@ -11,7 +11,7 @@ A site that allows users to dynamically add tea selections to a shopping cart wi
 
 ## Screen Capture
 
-![Gif](/gif.gif "Gif")
+![Gif](/scree.gif "Gif")
 
 
 ## Installation
@@ -25,10 +25,10 @@ gulp
 
 ## Built With
 
-* Angular.JS
+* AngularJS
 * JavaScript   
-* Express.JS
-* Node.JS
+* Express
+* Node.js
 
 
 
